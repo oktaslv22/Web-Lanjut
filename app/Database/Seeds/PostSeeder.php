@@ -9,10 +9,15 @@ class PostSeeder extends Seeder
 	public function run()
 	{
 			$model = model('PostModel');
-
+			$kategori = ['nature','programming','cat','sport','lifestyle','food'];
+			for ($i=0;$i<6;$i++){
 			$model->insert([
-					'judul'      => static::faker()->email,
-					'ip_address' => static::faker()->ipv4,
+					'judul'      => static::faker()->sentence(3),
+					'slug' 		 => static::faker()->unique()->slug(3),
+					'author'	 => static::faker()->name(),
+					'kategori'	 => $kategori[0],
+					'deskripsi'	 => static::faker()->text()
 			]);
 	}
+}
 }
