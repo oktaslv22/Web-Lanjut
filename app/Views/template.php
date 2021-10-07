@@ -26,7 +26,6 @@
   <!-- summernote -->
   <link rel="stylesheet" href="/assets/adminlte/plugins/summernote/summernote-bs4.min.css">
 </head>
-<body class="hold-transition sidebar-mini layout-fixed">
 
 <?= $this->renderSection('content');?>
 
@@ -65,5 +64,5 @@
 <script src="/assets/adminlte/dist/js/demo.js"></script>
 <!-- AdminLTE dashboard demo (This is only for demo purposes) -->
 <script src="/assets/adminlte/dist/js/pages/dashboard.js"></script>
-</body>
+
 </html>

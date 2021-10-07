@@ -4,6 +4,7 @@ namespace App\Controllers;
 
 use App\Controllers\BaseController;
 
+
 class Templating extends BaseController
 {
 	public function index()
@@ -17,4 +18,5 @@ class Templating extends BaseController
             // echo view('layouts/footer');
         return view('view_admin');
 	}
+	
 }
