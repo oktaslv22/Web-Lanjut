@@ -224,7 +224,7 @@
     Form Tambah Posts
   </div>
   <div class="card-body">
-      <form action="/admin/post/store" method="POSt">
+      <form action="/admin/post/store" method="POST">
   <form>
       <div class="row">
   <div class="col-md-4">
