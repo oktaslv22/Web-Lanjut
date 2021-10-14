@@ -182,7 +182,7 @@
             </a>
 </li>
           <li class="nav-item">
-            <a href="/admin/post" class="nav-link">
+            <a href="/admin/posts" class="nav-link">
               <i class="nav-icon fas fa-book-open"></i>
               <p>
                 My Posts
@@ -204,7 +204,7 @@
       <div class="container-fluid">
         <div class="row mb-2">
           <div class="col-sm-6">
-            <h1 class="m-0">Dashboard</h1>
+            <h1 class="m-0">My Posts</h1>
           </div><!-- /.col -->
           <div class="col-sm-6">
             <ol class="breadcrumb float-sm-right">
@@ -215,7 +215,47 @@
         </div><!-- /.row -->
       </div><!-- /.container-fluid -->
     </div>
+
     <!-- /.content-header -->
+    <!-- Main Content-->
+    <div class="container">
+    <div class="card">
+  <div class="card-header">
+    Form Tambah Posts
+  </div>
+  <div class="card-body">
+      <form action="/admin/post/store" method="POSt">
+  <form>
+      <div class="row">
+  <div class="col-md-4">
+      <div class ="form-grup">
+          <label for="judul" >Judul Postingan</label>
+          <input type="text" class="form-control" id="judul" name="judul">
+        </div>
+        <div class ="form-grup">
+            <label for="slug" >Slug</label>
+            <input type="text" class="form-control" id="slug" name="slug">
+        </div>
+        <div class ="form-grup">
+            <label for="kategori" >Kategori Postingan</label>
+            <input type="text" class="form-control" id="kategori" name="kategori">
+        </div>
+        <div class ="form-grup">
+            <label for="author" >Author</label>
+            <input type="text" class="form-control" id="author" name="author">
+        </div><br>
+        <button type="submit" class="btn btn-primary">
+            <i class="fas fa-paper-plane"></i>Submit</button>
+        </div>
+        <div class ="col-md-8">
+            <label for="deskripsi">Deskripsi Postingan</label><br>
+            <textarea name="deskripsi" id="deskripsi"></textarea>
+        </div>
+    </div>
+  </form>
+</div>
+    </div> 
+</div>
     <!-- bakal diubah-->
 
   </div>
@@ -236,4 +276,12 @@
 </div>
 <!-- ./wrapper -->
 
+
 <?= $this->endSection(); ?>
+
+<?php $this->Section('myscript');?>
+<script>
+    
+    $('#deskripsi').summernote()
+    </script>
+    <?= $this->endSection(); ?>

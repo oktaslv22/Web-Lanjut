@@ -42,6 +42,9 @@ $routes->get('/', function(){
 	echo view('layouts/footer');
 });
 $routes->get('/admin','Templating::index');
+$routes->get('/admin/post','AdminPostsController::index');
+$routes->get('/admin/post/create','AdminPostsController::create');
+$routes->get('/admin/post/store','AdminPostsController::store');
 $routes->get('/register','Register::register');
 $routes->post('/saveRegister','Register::saveRegister');
 // $routes->get('/biodata/(:alpha)/(:num)','Biodata::fungsiBaru/$1/$2');
