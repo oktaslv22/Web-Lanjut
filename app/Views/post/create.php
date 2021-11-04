@@ -230,7 +230,7 @@
             <section class="content">
                 <div class="card">
                     <div class="card-header">
-                        Form Tambah Posts
+                        Form Create Posts
                     </div>
                     <div class="card-body">
                         <form action="/admin/post/store" method="POST">

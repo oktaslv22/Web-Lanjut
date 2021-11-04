@@ -217,7 +217,7 @@
             <!-- /.content-header -->
             <!-- Main Content -->
             <div class="container">
-                <a href="/admin/post/create" class="btn btn-primary"><i class="fas fa-plus"></i> Tambah Data</a>
+                <a href="/admin/post/create" class="btn btn-primary"><i class="fas fa-plus"></i> Create</a>
             </div>
             <div class="card-body">
                 <div class="table-responsive">
@@ -226,10 +226,10 @@
                             <tr>
                                 <th scope="col">No</th>
                                 <th scope="col">Judul</th>
-                                <th scope="col">slug</th>
+                                <th scope="col">Slug</th>
                                 <th scope="col">Author</th>
                                 <th scope="col">Kategori</th>
-                                <th scope="col">action</th>
+                                <th scope="col">Action</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -241,8 +241,8 @@
                                 <td><?= $post['author']; ?></td>
                                 <td><?= $post['kategori']; ?></td>
                                 <td>
-                                    <a href="/post/edit/<?= $post['slug']; ?>" class="btn btn-sm btn-warning me-1"><i class="fas fa-edit"> Edit</i></a>
-                                    <a href="/post/delete/<?= $post['slug']; ?>" class="btn btn-sm btn-danger"><i class="fas fa-trash"> Delete</i></a>
+                                    <a href="/admin/post/edit/<?= $post['slug']; ?>" class="btn btn-sm btn-warning me-1"><i class="fas fa-edit">Update</i></a>
+                                    <a href="/admin/post/delete/<?= $post['slug']; ?>" class="btn btn-sm btn-danger" onclick="return confirm('yakin ingin menghapus ?');"><i class="fas fa-trash"> Delete</i></a>
                                 </td>
                             </tr>
                             <?php endforeach; ?>
